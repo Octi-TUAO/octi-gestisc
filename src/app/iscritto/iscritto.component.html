@@ -1,0 +1,13 @@
+<h4 *ngIf="iscritto.nome != '' && iscritto.cognome != ''">{{iscritto.getNome()}}</h4>
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" placeholder="Inserisci nome" [(ngModel)] = "iscritto.nome">
+  </div>
+  <div class="form-group">
+    <label>Cognome</label>
+    <input type="text" class="form-control" placeholder="Inserisci cognome" [(ngModel)] = "iscritto.cognome">
+  </div>
+  <div class="form-group">
+    <label>Codice Fiscale</label>
+    <input type="text" class="form-control" placeholder=" Inserisci Codfisc" [(ngModel)] = "iscritto.codFisc">
+  </div>

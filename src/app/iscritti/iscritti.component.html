@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-5">
+    <button class="btn btn-primary btn-block" (click)="nuovoIs()">Nuovo</button>
+      <br>
+      <div class="list-group">
+        <div *ngFor = "let iscritto of iscritti; let i = index">
+          <button type="button" class="list-group-item list-group-item-action" 
+          *ngIf = "iscritto.nome != ''"
+          (click)="nomeClick(i)"
+          [ngClass]="{'active' : corrente==i}">{{iscritto.nome}}
+          </button>
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-7">
+    <app-iscritto [iscritto]="iscritti[corrente]"></app-iscritto>
+  </div>
+</div>
